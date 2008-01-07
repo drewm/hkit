@@ -1,0 +1,15 @@
+#summary New development since the last release (in svn)
+
+Listed below are notable changes made in SVN trunk since the last tagged release. 
+
+
+== New since release 0.5 ==
+
+  * Added support for some common IM URI schemes when parsing URLs. This really needs fleshing out to support all officially recognised and commonly used URI schemes (see http://en.wikipedia.org/wiki/URI_scheme) but this is a good start. Thanks to Steve Ivy for the patch. Should now recognise:
+    * aim:
+    * ymsgr:
+    * skype:
+    * msnim:
+    * im:
+    * webcal:
+    * xmpp:
