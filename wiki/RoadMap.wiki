@@ -1,0 +1,19 @@
+#summary Road Map towards future releases
+
+This is a very basic and preliminary road map as we head towards a version 1.0 release of hkit.
+
+= Version 1.0 =
+
+These are the primary objectives that need to be fulfilled to reach hkit version 1.
+
+  * Solid hCard implementation (pass all tests: http://microformats.org/tests/hcard/)
+  * Support for XFN, minimum rel="me"
+  * Support for multiple class instances within a script
+  * User documentation for creating format profiles
+  * Remote document caching
+
+= Immediately beyond 1.0 =
+
+  * hReview implementation (pass all tests: http://microformats.org/tests/hreview/)
+  * hCalendar implementation (when tests become available)
+  * Support for parsing for multiple compound microformats at once (e.g. hCard within an hReview)
