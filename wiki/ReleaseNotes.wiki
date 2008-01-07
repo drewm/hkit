@@ -1,0 +1,55 @@
+#summary Release notes for all releases
+
+= Introduction =
+
+Notes for each release will be added below. Don't be put off that the last release was July 2006 - despite the apparent long pause, development has not been abandoned. The project is still very much current.
+
+
+==release 0.5 - 22 July 2006==
+
+This release appears small, but includes some significant changes which may have caused some regression. Do let me know if you spot any anomalies. Any test results are welcome. There’s a live version on tools.microformatic.com
+
+In this release:
+
+  * fixed by-ref issue cropping up in PHP 5.0.5
+  * fixed a bug with a@title
+  * added support for new hCard fn=n optimisation
+  * added support for new a.include include-pattern
+
+The a.include pattern is still not quite finalised, but I felt it was worth implementing to see how practical it is to both use and parse. If for any reason a.include doesn’t become official, I’ll be taking it out again.
+
+The new fn=n optimisation says that if n isn’t specified and n cannot be implied from fn, then fn can be assumed to be equal to “fn n” and fn may therefore contain n’s sub-items. Easy, right?
+
+==release 0.4 - 23 June 2006==
+
+This release of hKit has a number of small, but important improvements:
+
+  * Refinment of the include-pattern code to prevented nested includes from causing infinite loops
+  * Calls to getByURL() now return false if URL can’t be fetched
+  * Added pre-flight check to ensure SimpleXML is available
+  * Added deduping of class names that are only supposed to appear once
+  * Prevented accumulation of multiple ‘value’ values
+  * Tuned whitespace handling and treatment of DEL elements
+
+With the hCard profile, hKit now pretty much supports all the parsing rules on the wiki and passes all the hCard tests in the test suite.
+
+==release 0.3 - 22 June 2006==
+
+Last night I dropped another update to hKit – version 0.3. 
+
+I’m still focussing on getting hCard support properly working before branching out to other µFs.
+
+Key improvements are:
+
+  * Support for include-pattern
+  * Support for td@headers pattern
+  * Performs implied n-optimization expansion, rather than leaving it to the user
+  * Passes all hCard tests, apart from the telephone example cited yesterday
+
+Problems I know I haven’t dealt with yet, but have in-the-shower solutions for are:
+
+  * Infinite loop protection for include-pattern
+  * Nested formats, e.g. hCard inside hReview, or XFN inside hCard, or both!
+  * Flight-checks and fallover for different PHP environments
+
+Any testing and feedback is appreciated.
