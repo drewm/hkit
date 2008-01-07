@@ -2,5 +2,5 @@
 
 = release 0.5 (current) =
 
-  * No support for URI schemes like skype: and msnim: (patch submitted - in svn soon)
+  * No support for URI schemes like skype: and msnim: (fixed in svn)
   * Instantiating multiple instances (such as in a loop) currently fails due to the way profiles are loaded
