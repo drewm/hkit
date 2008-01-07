@@ -14,6 +14,7 @@ These are the primary objectives that need to be fulfilled to reach hkit version
 
 = Immediately beyond 1.0 =
 
+  * Native JSON output option
   * hReview implementation (pass all tests: http://microformats.org/tests/hreview/)
   * hCalendar implementation (when tests become available)
   * Support for parsing for multiple compound microformats at once (e.g. hCard within an hReview)
