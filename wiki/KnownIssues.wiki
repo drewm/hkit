@@ -1,0 +1,6 @@
+#summary A list of known issues with hkit
+
+= release 0.5 (current) =
+
+  * No support for URI schemes like skype: and msnim: (patch submitted - in svn soon)
+  * Instantiating multiple instances (such as in a loop) currently fails due to the way profiles are loaded
