@@ -11,6 +11,7 @@ These are the primary objectives that need to be fulfilled to reach hkit version
   * Support for multiple class instances within a script
   * User documentation for creating format profiles
   * Remote document caching
+  * Representative hCard support
 
 = Immediately beyond 1.0 =
 
