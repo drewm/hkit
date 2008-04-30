@@ -14,3 +14,8 @@ Listed below are notable changes made in SVN trunk since the last tagged release
     * im:
     * webcal:
     * xmpp:
+  * changed interface so that a numeric array of results is aways returned - even for one result - thanks Ueli Weiss
+  * new experimental method for extracting node text value - fix for http://code.google.com/p/hkit/issues/detail?id=1
+  * improved matching for redundant whitespace
+  * improved unicode support in implied n optimization rules for hCard profile
+  * removed line breaks now replaced with a single space to prevent word joining - thanks Ueli Weiss
