@@ -1,6 +1,6 @@
 #summary Road Map towards future releases
 
-This is a very basic and preliminary road map as we head towards a version 1.0 release of hkit.
+This is a very basic and preliminary road map as we head towards a version 1.0 release of hkit. Contributions are always welcomed.
 
 = Version 1.0 =
 
