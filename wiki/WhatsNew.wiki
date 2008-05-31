@@ -19,3 +19,8 @@ Listed below are notable changes made in SVN trunk since the last tagged release
   * improved matching for redundant whitespace
   * improved unicode support in implied n optimization rules for hCard profile
   * removed line breaks now replaced with a single space to prevent word joining - thanks Ueli Weiss
+  * Will now always return an array of results, even if only one result is found. Previously if there was only a single result, everything was shifted up the structure one step. $results[0] will always be the first result, even if there's only one. Thanks to Ueli Weiss for the patch.
+  * Fixed some whitespace handling stuff that was letting double-whitespace through.
+  * Finally address the long-standing issue where Tidy would wrap long lines and trim whitespace, resulting in words being joined when hkit then removed the line breaks. Ueli voiced an additional vote for the suggested "just add a space, idiot!" approach, so I just went with it.
+  * Addressed a really tricky problem where getting the node text of a value like 'note' was resulting in broken and duplicated text. This is because the code was getting the text for the node (including descendants) and then again for each descendant in turn. The results were a mess. I've replaced this with a change that seems way too simple and I'm worried it won't work. I'm now getting the XML output of the node and stripping tags to get the text. From my tests it works, but I could really used some extra tests on this. Resolves http://code.google.com/p/hkit/issues/detail?id=1
+  * Made some changes to the hkit profile and the way unicode is handled in the implied n optimisation. It was failing to match the 'Surname Initial.' pattern when the initial was a non-ascii character. Should be ok now. 
