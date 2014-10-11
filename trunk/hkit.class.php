@@ -72,7 +72,7 @@
 	{
 		
 		public $tidy_mode	= 'proxy'; // 'proxy', 'exec', 'php' or 'none'
-		public $tidy_proxy	= 'http://cgi.w3.org/cgi-bin/tidy?forceXML=on&docAddr='; // required only for tidy_mode=proxy
+    public $tidy_proxy  = ''; // required only for tidy_mode=proxy. e.g. like 'http://services.w3.org/tidy/tidy?forceXML=on&docAddr=', but use your own.
 		public $tmp_dir		= '/path/to/writable/dir/'; // required only for tidy_mode=exec
 		
 		private $root_class = '';
